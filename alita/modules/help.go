@@ -27,13 +27,13 @@ var HelpModule = moduleStruct{
 }
 
 const (
-	aboutText = "Info & About\n\nHere are some of the FAQs about Alita."
-	startHelp = "Hey there! My name is Alita ✨.\n" +
+	aboutText = "Info & About\n\nHere are some of the FAQs about Rani."
+	startHelp = "Hey there! My name is Rani ✨.\n" +
 		"I'm here to help you manage your groups!\n" +
 		"Hit /help to find out more about how to use me to my full potential.\n" +
-		"Join my <a href='https://t.me/AlitaRobotUpdates'>News Channel</a> to get information on all the latest updates."
+		"Join my <a href='https://t.me/NikkiAssociation'>News Channel</a> to get information on all the latest updates."
 	mainhlp = "Hey %s!\n" +
-		"My name is Alita ✨.\n\n" +
+		"My name is Rani ✨.\n\n" +
 		"I am a group management bot, here to help you get around and keep the order in your groups!\n" +
 		"I have lots of handy features, such as flood control, a warning system, a note keeping system, " +
 		"and even predetermined replies on certain keywords.\n\n" +
@@ -47,7 +47,7 @@ const (
 var (
 	backBtnSuffix = []gotgbot.InlineKeyboardButton{
 		{
-			Text:         "« Back",
+			Text:         "Back",
 			CallbackData: "helpq.Help",
 		},
 		{
@@ -66,11 +66,11 @@ var (
 			{
 				{
 					Text: "News Channel 📢",
-					Url:  "https://t.me/AlitaRobotUpdates",
+					Url:  "https://t.me/NikkiAssociation",
 				},
 				{
 					Text: "Support Group 👥",
-					Url:  "https://t.me/DivideSupport",
+					Url:  "https://t.me/NikkiSupport",
 				},
 			},
 			{
@@ -82,7 +82,7 @@ var (
 			{
 				// custom back button
 				{
-					Text:         "⬅ Back",
+					Text:         "Back",
 					CallbackData: "helpq.BackStart",
 				},
 			},
@@ -99,23 +99,17 @@ var (
 			{
 				{
 					Text: "➕ Add me to chat!",
-					Url:  "https://t.me/Alita_Robot?startgroup=botstart",
+					Url:  "https://t.me/RaniRobot?startgroup=botstart",
 				},
 				{
-					Text: "Support Group 👥",
-					Url:  "https://t.me/DivideSupport",
+					Text: "Support Group ✨",
+					Url:  "https://t.me/NikkiSupport",
 				},
 			},
 			{
 				{
 					Text:         "📚 Commands & Help",
 					CallbackData: "helpq.Help",
-				},
-			},
-			{
-				{
-					Text:         "Language 🌏",
-					CallbackData: "helpq.Languages",
 				},
 			},
 		},
@@ -373,7 +367,7 @@ func (moduleStruct) botConfig(b *gotgbot.Bot, ctx *ext.Context) error {
 		iKeyboard = [][]gotgbot.InlineKeyboardButton{
 			{
 				{
-					Text: "➕ Add Alita to chat!",
+					Text: "➕ Add Rani to chat!",
 					Url:  fmt.Sprintf("https://t.me/%s?startgroup=botstart", b.Username),
 				},
 			},
@@ -469,7 +463,7 @@ func (moduleStruct) help(b *gotgbot.Bot, ctx *ext.Context) error {
 		}
 	} else {
 		pmMeKbText := "Click here for help!"
-		pmMeKbUri := fmt.Sprintf("https://t.me/%s?start=help_help", b.Username)
+		pmMeKbUri := fmt.Sprintf("https://t.me/%s?start=help", b.Username)
 		moduleHelpString := "Contact me in PM for help!"
 		replyMsgId := msg.MessageId
 		var lowerModName string
