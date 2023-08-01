@@ -69,7 +69,7 @@ var (
 					Url:  "https://t.me/NikkiAssociation",
 				},
 				{
-					Text: "Support Group 👥",
+					Text: "Support Group ✨",
 					Url:  "https://t.me/NikkiSupport",
 				},
 			},
@@ -102,7 +102,7 @@ var (
 					Url:  "https://t.me/RaniRobot?startgroup=botstart",
 				},
 				{
-					Text: "Support Group ✨",
+					Text: "Support Group ⚡",
 					Url:  "https://t.me/NikkiSupport",
 				},
 			},
